@@ -2,7 +2,7 @@
 
 Name:		pam_u2f
 Version:	1.4.0
-Release:	1
+Release:	2
 Source0:	https://developers.yubico.com/pam-u2f/Releases/pam_u2f-%{version}.tar.gz
 Summary:	Pluggable Authentication Module (PAM) for U2F and FIDO2
 URL:		https://github.com/yubico/pam-u2f
@@ -30,7 +30,7 @@ over U2F.
 %prep
 %autosetup -p1
 
-%files
+%files -n pam-u2f
 %doc AUTHORS NEWS README
 %license COPYING
 %{_mandir}/man8/pam_u2f.8{,.*}
