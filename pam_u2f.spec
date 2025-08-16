@@ -28,7 +28,7 @@ This module implements PAM over U2F and FIDO2, providing an easy way to integrat
 
 %package -n pamu2fcfg
 Summary:       Configures PAM authentication over U2F
-Requires:      %{name}%{?_isa} = %{version}-%{release}
+Requires:      pam-u2f%{?_isa} = %{version}-%{release}
 
 %description -n pamu2fcfg
 pamu2fcfg provides a command line tool for configuring PAM authentication
