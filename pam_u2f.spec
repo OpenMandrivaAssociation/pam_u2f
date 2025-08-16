@@ -19,6 +19,13 @@ BuildRequires: a2x
 %description
 This module implements PAM over U2F and FIDO2, providing an easy way to integrate the YubiKey (or other U2F/FIDO2 compliant authenticators) into your existing infrastructure.
 
+%package -n pam-u2f
+Summary:       Configures PAM authentication over U2F
+
+
+%description -n pam-u2f
+This module implements PAM over U2F and FIDO2, providing an easy way to integrate the YubiKey (or other U2F/FIDO2 compliant authenticators) into your existing infrastructure.
+
 %package -n pamu2fcfg
 Summary:       Configures PAM authentication over U2F
 Requires:      %{name}%{?_isa} = %{version}-%{release}
