@@ -2,7 +2,7 @@
 
 Name:		pam_u2f
 Version:	1.4.0
-Release:	3
+Release:	4
 Source0:	https://developers.yubico.com/pam-u2f/Releases/pam_u2f-%{version}.tar.gz
 Source1:	u2f-required.pam
 Source2:	u2f-sufficient.pam
