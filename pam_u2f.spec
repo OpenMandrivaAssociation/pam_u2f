@@ -2,8 +2,10 @@
 
 Name:		pam_u2f
 Version:	1.4.0
-Release:	2
+Release:	3
 Source0:	https://developers.yubico.com/pam-u2f/Releases/pam_u2f-%{version}.tar.gz
+Source1:	u2f-required.pam
+Source2:	u2f-sufficient.pam
 Summary:	Pluggable Authentication Module (PAM) for U2F and FIDO2
 URL:		https://github.com/yubico/pam-u2f
 License:	BSD-2-Clause
@@ -37,9 +39,15 @@ over U2F.
 %prep
 %autosetup -p1
 
+%check
+mkdir -p %{buildroot}%{_sysconfdir}/pam.d/
+cp %{S:1} %{buildroot}%{_sysconfdir}/pam.d/u2f-required
+cp %{S:2} %{buildroot}%{_sysconfdir}/pam.d/u2f-sufficient
+
 %files -n pam-u2f
 %doc AUTHORS NEWS README
 %license COPYING
+%{_sysconfdir}/pam.d/u2f*
 %{_mandir}/man8/pam_u2f.8{,.*}
 %{_libdir}/security/pam_u2f.so
 
